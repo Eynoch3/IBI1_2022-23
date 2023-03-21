@@ -9,3 +9,7 @@ plt.pie(sizes,explode=explode,labels=labels,autopct='%1.1f%%',
         shadow=False, startangle=90) #set the pie properties and draw the image
 plt.axis('equal') #display images
 plt.show() #save and display
+
+a='Comedy' # create a variable of the requested genre that can be modified.
+print (movie_genre[a]) #print the value
+
