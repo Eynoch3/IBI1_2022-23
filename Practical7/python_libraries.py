@@ -25,5 +25,32 @@ print (covid_data.iloc[0:3,my_columns])
 
 print (covid_data.loc[2:4,"date"])
 
-if 
-print (covid_data.loc[,"total_cases"])
+
+
+print (covid_data.loc[covid_data.loc[:,"location"]=="Afghanistan","total_cases"])
+print (covid_data.loc[0:81,"total_cases"])
+
+my_columns=[False,True,True,True,False,False]
+new_data=covid_data.loc[covid_data.loc[:,'date']=='2020-03-31',my_columns]
+print (new_data)
+a=new_data.iloc[:,1:3]
+print (np.mean(a))
+
+import matplotlib.pyplot as plt
+new_data_new_cases=new_data.loc[:,"new_cases"]
+fig=plt.figure()
+view=plt.boxplot(new_data_new_cases)
+plt.show()
+
+import matplotlib.pyplot as plt
+new_data_new_deaths=new_data.loc[:,"new_deaths"]
+fig=plt.figure()
+view=plt.boxplot(new_data_new_deaths)
+plt.show()
+
+
+world_dates=covid_data.loc[covid_data.loc[:,"location"]=="World","date"]
+world_new_cases=covid_data.loc[covid_data.loc[:,"location"]=='World','new_cases']
+plt.plot(world_dates, world_new_cases, 'b+')
+
+
