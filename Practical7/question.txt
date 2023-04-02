@@ -2,4 +2,6 @@ question:
 
 I was interested in the total number of cases and deaths in China, how to make the plot
 
+line number：57-62
 
+result；At beginning of January, total cases and deaths are about same, and from the end of January to the end of March, births start to far outnumber deaths.
