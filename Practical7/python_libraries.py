@@ -17,7 +17,7 @@ print (covid_data.iloc[0,1]) #the data in the first row and second column
 print (covid_data.iloc[2,0:5]) #the data in the third row and the column from first to fifth
 print (covid_data.iloc[0:2,:]) #the data in the row from first to second and show all the columns 
 print (covid_data.iloc[0:10:2,0:5]) #the data from first row to tenth, take it every two row,the column from fisrt to fifth
-print (covid_data.iloc[0:1001:100,2])
+print (covid_data.iloc[999:2001:100,2])
 
 print (covid_data.iloc[0:3,[0,1,3]])
 my_columns = [True,True,False,True,False,False]
@@ -48,9 +48,16 @@ fig=plt.figure()
 view=plt.boxplot(new_data_new_deaths)
 plt.show()
 
-
 world_dates=covid_data.loc[covid_data.loc[:,"location"]=="World","date"]
 world_new_cases=covid_data.loc[covid_data.loc[:,"location"]=='World','new_cases']
-plt.plot(world_dates, world_new_cases, 'b+')
+world_new_deaths=covid_data.loc[covid_data.loc[:,"location"]=='world','new_deaths']
+plt.plot(world_dates, world_new_cases,'ro')
+plt.show()
 
+China_dates=covid_data.loc[covid_data.loc[:,'location']=='China','date']
+China_total_cases=covid_data.loc[covid_data.loc[:,'location']=='China','total_cases']
+China_total_deaths=covid_data.loc[covid_data.loc[:,'location']=='China','total_deaths']
+plt.plot(China_dates, China_total_cases,'ro')
+plt.plot(China_dates, China_total_deaths,'bo')
+plt.show()
 
