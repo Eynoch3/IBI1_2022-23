@@ -50,8 +50,12 @@ plt.show()
 
 world_dates=covid_data.loc[covid_data.loc[:,"location"]=="World","date"]
 world_new_cases=covid_data.loc[covid_data.loc[:,"location"]=='World','new_cases']
-world_new_deaths=covid_data.loc[covid_data.loc[:,"location"]=='world','new_deaths']
+world_new_deaths=covid_data.loc[covid_data.loc[:,"location"]=='World','new_deaths']
 plt.plot(world_dates, world_new_cases,'ro')
+plt.plot(world_dates, world_new_deaths,'bo')
+plt.ylabel('new cases/deaths')
+plt.title('new cases and new deaths across the world')
+plt.xlabel("dates")
 plt.show()
 
 China_dates=covid_data.loc[covid_data.loc[:,'location']=='China','date']
@@ -59,5 +63,10 @@ China_total_cases=covid_data.loc[covid_data.loc[:,'location']=='China','total_ca
 China_total_deaths=covid_data.loc[covid_data.loc[:,'location']=='China','total_deaths']
 plt.plot(China_dates, China_total_cases,'ro')
 plt.plot(China_dates, China_total_deaths,'bo')
+plt.xlabel("dates")
+plt.ylabel('total cases/deaths')
+plt.title("total cases and deaths in China")
 plt.show()
+
+
 
