@@ -12,10 +12,10 @@ for line in input_file:
     seq=seq+line #store the sequence line
   elif line[0]==">"and seq!="": #meet a new sequence
     if seq.endswith("TGA"): #find the stop codon
-      out_file.write(header+'\n'+seq+'\n') 
-      seq=''
+      out_file.write(header+'\n'+seq+'\n') #output the sequence that satisfies the requirement
+      seq='' #reset the seq
       header=str(x[1:13])
-if seq.endswith('TGA'):
+if seq.endswith('TGA'): #whether the last sequence satisfy the requirement
   out_file.write(header+'\n'+seq+'\n')
 input_file.close()
 out_file.close()
