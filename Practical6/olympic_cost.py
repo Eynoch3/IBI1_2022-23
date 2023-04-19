@@ -1,17 +1,11 @@
 costs=[1,8,15,7,5,14,43,40] #make a list to display data
-print (str(costs[0]))
-print (str(costs[1]))
-print (str(costs[2]))
-print (str(costs[3]))
-print (str(costs[4]))
-print (str(costs[5]))
-print (str(costs[6]))
-print (str(costs[7])) #print the data
+sorted_values=sorted(costs) #print the data
+print(sorted_values)
 
 import numpy as np 
 import matplotlib.pyplot as plt #create a bar chart
 N=8 #there are 8 pieces of data
-scores=(1,8,15,7,5,14,43,40) #enter 8 specific data
+scores=sorted_values #enter 8 specific data
 ind=np.arange(N) #the x locations for the groups
 width=0.7 #the width of the bar
 p1=plt.bar(ind,scores,width) #related properties of a graph
