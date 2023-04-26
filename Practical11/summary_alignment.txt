@@ -1,0 +1,4 @@
+I calculated that the alignment score of humen sequence and mouse sequence is 3579 ,the alignment score of human sequence and cate sequence is 3717, the alignment score of mouse sequence and cat sequence is 3592. The percentages of identical amino acids for each of the three comparison are 0.8211, 0.8522 and 0.8174.
+The result shows that the human and cat's sequences are most closely related.
+Because during the process of biological evolution, the genetic variation in humans and cats was more similar to  natural selection, as is the composition of their proteins. This suggests that cats could be used more effectively in human disease research.   
+
