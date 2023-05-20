@@ -6,6 +6,7 @@ from openpyxl import Workbook,load_workbook
 
 #using a XML file as an input
 #to get all the element from the file go_obo.xml
+#the go_obo.xml file is too large to upload to the giuHub, so I didn't upload this file
 DOMTree=xml.dom.minidom.parse('go_obo.xml')
 collection=DOMTree.documentElement
 terms=collection.getElementsByTagName('term')
